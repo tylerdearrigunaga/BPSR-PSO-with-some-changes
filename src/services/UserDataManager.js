@@ -367,7 +367,7 @@ class UserDataManager {
     checkTimeoutClear() {
         if (!config.GLOBAL_SETTINGS.autoClearOnTimeout || this.lastLogTime === 0 || this.users.size === 0) return;
         const currentTime = Date.now();
-        if (this.lastLogTime && currentTime - this.lastLogTime > 15000) {
+        if (this.lastLogTime && currentTime - this.lastLogTime > (config.GLOBAL_SETTINGS.timeoutInMS || 6000)) {
             this.clearAll();
             logger.info('Timeout reached, statistics cleared!');
         }

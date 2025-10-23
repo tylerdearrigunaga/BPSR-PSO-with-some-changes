@@ -178,6 +178,10 @@ class Window {
     loadURL(url) {
         this._window.loadURL(url);
     }
+
+    clearData() {
+      this.getWindow().webContents.executeJavascript("clearData()");
+    }
 }
 
 const window = new Window();

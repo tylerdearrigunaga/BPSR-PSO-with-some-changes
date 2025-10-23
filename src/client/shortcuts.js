@@ -12,6 +12,7 @@ export function registerShortcuts() {
     registerResize();
     registerMove();
     registerMinimize();
+    registerClear();
 }
 
 /**
@@ -82,4 +83,10 @@ function registerMinimize() {
     globalShortcut.register('Control+Alt+Z', () => {
         window.minimizeOrRestore();
     });
+}
+
+function registerClear() {
+  globalShortcut.register('Control+0', () => {
+    window.clearData();
+  });
 }

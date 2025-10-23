@@ -4,8 +4,9 @@ class Config {
         this.IS_PAUSED = false;
         this.GLOBAL_SETTINGS = {
             autoClearOnServerChange: true,
-            autoClearOnTimeout: false,
+            autoClearOnTimeout: true,
             onlyRecordEliteDummy: false,
+            timeoutInMS: 6000
         };
     }
 }
